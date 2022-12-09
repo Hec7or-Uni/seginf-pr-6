@@ -1,0 +1,2 @@
+clang --analyze  test
+CodeChecker log -b "clang test2.cpp" -o ./compile_commands.json; CodeChecker analyze ./compile_commands.json --enable sensitive --output ./reports; CodeChecker parse ./reports -e html -o ./reports_html
